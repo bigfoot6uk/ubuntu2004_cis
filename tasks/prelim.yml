@@ -50,11 +50,6 @@
   changed_when: false
   check_mode: false
 
-- name: "PRELIM | Run apt cache update"
-  apt:
-    update_cache: true
-  changed_when: false
-
 - name: "PRELIM | Section 4.1 | Configure System Accounting (auditd)"
   apt:
     name: "{{ auditd_package[ansible_os_family] }}"

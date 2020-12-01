@@ -14,7 +14,7 @@ ubuntu2004cis_selinux_disable: false
 ubuntu2004cis_auditd_disable: false
 
 # Ignore remount errors if you're building an image or are going to reboot anyway
-ubuntu2004cis_ignore_remount_errors: false
+ubuntu2004cis_ignore_remount_errors: true
 
 # These variables correspond with the CIS rule IDs or paragraph numbers defined in
 # the CIS benchmark documents.
@@ -332,7 +332,7 @@ ubuntu2004cis_is_router: false
 ubuntu2004cis_ipv6_required: true
 
 # AIDE
-ubuntu2004cis_config_aide: true
+ubuntu2004cis_config_aide: false
 # AIDE cron settings
 ubuntu2004cis_aide_cron:
   cron_user: root

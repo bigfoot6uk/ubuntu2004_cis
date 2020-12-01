@@ -17,26 +17,6 @@
       sysctl_set: true
   when: ansible_virtualization_type != "docker"
 
-- name: systemd restart tmp.mount
-  become: true
-  systemd:
-      name: tmp.mount
-      daemon_reload: true
-      enabled: true
-      masked: false
-      state: reloaded
-  when: ansible_virtualization_type != "docker"
-  ignore_errors: "{{ ubuntu2004cis_ignore_remount_errors }}"
-
-- name: systemd restart var-tmp.mount
-  become: true
-  systemd:
-      name: var-tmp.mount
-      daemon_reload: true
-      enabled: true
-      masked: false
-      state: reloaded
-  ignore_errors: "{{ ubuntu2004cis_ignore_remount_errors }}"
 
 - name: generate new grub config
   become: true
